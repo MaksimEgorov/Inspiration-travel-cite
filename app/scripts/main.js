@@ -151,7 +151,7 @@ $(function () {
   });
   $('#hamburger_id').click(function () {
     $(this).toggleClass('is-active');
-    $('.mobile-menu').toggleClass('active')
+    $('.mobile-menu').toggleClass('active');
     $('.desc-menu').toggleClass('logo-none-bg')
   });
 
@@ -186,6 +186,19 @@ $(function () {
     }
   });
 
+  $select2.on('select2:select select2:unselect', function() {
+    const $this = $(this);
+    const $selectContainer = $this.parent().find('.select2-selection');
+    const $inline = $selectContainer.find('.select2-search--inline');
+    if (!$this.hasClass('js-insp-select2--no-search')) {
+      const $list = $selectContainer.find('.select2-selection__rendered');
+      if ($list.find('li').length > 1) {
+        $inline.remove();
+      } else {
+        $inline.text('Страна');
+      }
+    }
+  });
   $select2.on('select2:open', function () {
     const $this = $(this);
     const $selectContainer = $this.parent().find('.select2-selection');
