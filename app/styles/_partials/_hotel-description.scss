@@ -1,0 +1,116 @@
+.hotel-description {
+  box-sizing: border-box;
+  width: 100%;
+  padding-top: 80px;
+  padding-right: 288px;
+  padding-left: 288px;
+  padding-bottom: 66px;
+
+  .hotel-description__wrapper__top {
+    a {
+      color: #acacac;
+      font-family: 'Montserrat';
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0.52px;
+      text-decoration: none;
+      margin-left: -18px;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #e37d5f;
+      }
+
+      i {
+        margin-right: 11px;
+      }
+    }
+
+    h1.hotel-description__hotel-name {
+      color: #575756;
+      font-family: 'Montserrat';
+      font-size: 45px;
+      font-weight: 300;
+      line-height: 45px;
+      margin-top: 32px;
+    }
+
+    h3.hotel-description__hotel-location {
+      color: #7ab7a8;
+      font-family: 'Montserrat';
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1.68px;
+      margin-top: 24px;
+    }
+  }
+
+  .hotel-description__wrapper__bottom {
+    display: flex;
+    margin-top: 55px;
+
+    .wrapper-hotel-description {
+      width: 50%;
+      margin-left: auto;
+
+      .hotel-description__detailed--features {
+        display: block;
+        text-decoration: none;
+        color: #7ab7a8;
+        transition: color 0.3s;
+        border-spacing: 20px;
+        padding-left: 3px;
+        margin-top: 20px;
+
+
+        &:hover {
+          color: #e37d5f;
+        }
+
+        i {
+          margin-left: 11px;
+        }
+      }
+
+      table.hotel-description__detailed {
+        width: 100%;
+        font-weight: 400;
+        line-height: 30px;
+        font-size: 17px;
+        font-family: 'Montserrat';
+
+        tr>td {
+          color: #575756;
+        }
+
+        tr>:first-child {
+          color: #acacac;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1510px) {
+  .hotel-description {
+    padding: 70px 50px 50px 80px;
+  }
+
+  .hotel-description .hotel-description__wrapper__bottom .wrapper-hotel-description {
+    width: 60%;
+  }
+}
+
+@media (max-width: 990px) {
+  .hotel-description .hotel-description__wrapper__bottom{
+    flex-direction: column;
+  }
+  .hotel-description .hotel-description__wrapper__bottom .wrapper-hotel-description{
+    width: 100%;
+    margin-top: 20px;
+  }
+}

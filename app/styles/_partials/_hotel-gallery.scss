@@ -1,0 +1,22 @@
+.hotel-gallery {
+  width: 100%;
+
+  .hotel-gallery__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+      width: 33.3%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* @media (max-width: 1400px) {
+  .hotel-gallery .hotel-gallery__wrapper a {
+    width: 50%;
+  }
+} */

@@ -1,0 +1,45 @@
+
+.hotel-location-wrapper{
+  width: 100%;
+}
+
+.hotel-location {
+  box-sizing: border-box;
+  width: 100%;
+  padding-top: 93px;
+  padding-left: 240px;
+  padding-bottom: 60px;
+
+  h2{
+    display: inline;
+  }
+
+  .hotel-location__text {
+    color: #575756;
+    font-family: 'Montserrat';
+    font-size: 45px;
+    font-weight: 300;
+    line-height: 45px;
+  }
+}
+
+@media (max-width: 990px) {
+  .hotel-location {
+    padding-left: 130px;
+    padding-top: 70px;
+
+    .hotel-location__text {
+      font-size: 36px;
+    }
+  }
+
+  .hotel-location__map>iframe {
+    height: 360px;
+  }
+}
+
+@media (max-width: 450px){
+  .hotel-location{
+    padding-left: 20px;
+  }
+}

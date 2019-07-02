@@ -1,0 +1,98 @@
+.main-banner {
+  height: 820px;
+  background: url(../images/bg-hotel.png) center no-repeat;
+  background-size: cover;
+
+
+  .main-banner__hotel-name {
+    position: relative;
+
+    p {
+      display: inline-block;
+      position: absolute;
+      font-size: 13px;
+      line-height: 30px;
+      color: #575756;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 5px 15px;
+    }
+
+    .main-banner__hotel-name--top {
+      top: 20px;
+      right: 20px;
+    }
+
+    .main-banner__hotel-name--name {
+      font-size: 17px;
+      top: 720px;
+      left: 20px;
+    }
+
+    .main-banner__hotel-name--description {
+      font-size: 17px;
+      top: 760px;
+      left: 20px;
+    }
+
+    .main-banner__contact-us-btn {
+      position: absolute;
+      display: flex;
+      right: 240px;
+      top: 790px;
+      cursor: pointer;
+      padding: 20px 40px;
+      background-color: #e37d5f;
+      border-radius: 50px;
+      border: none;
+      text-decoration: none;
+      font-family: "Montserrat";
+      font-size: 19px;
+      color: #fff;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: #db613d;
+      }
+
+      .contact-us-btn__icon {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1450px) {
+  .main-banner .main-banner__hotel-name .main-banner__contact-us-btn {
+    right: 140px;
+  }
+}
+
+@media (max-width: 1240px) {
+  .main-banner {
+    height: 360px;
+  }
+
+  .main-banner .main-banner__hotel-name .main-banner__hotel-name--name {
+    top: 250px;
+  }
+
+  .main-banner .main-banner__hotel-name .main-banner__hotel-name--description {
+    top: 289px;
+  }
+
+  .main-banner .main-banner__hotel-name .main-banner__contact-us-btn {
+    top: 330px;
+  }
+}
+
+@media (max-width: 1111px) {
+  .main-banner .main-banner__hotel-name .main-banner__contact-us-btn {
+    right: 100px;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-banner .main-banner__hotel-name .main-banner__contact-us-btn {
+    right: 20px;
+  }
+}

@@ -1,0 +1,47 @@
+.bottom-banner {
+  width: 100%;
+  height: 640px;
+  background: url(../images/bottom-banner.jpg);
+  background-size: cover;
+
+  .bottom-banner__wrapper {
+    padding-top: 104px;
+    padding-left: 239px;
+
+
+
+    .bottom-banner__text {
+      width: 411px;
+      height: 113px;
+      color: #ffffff;
+      font-family: 'Montserrat';
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 40px;
+    }
+    .bottom-banner__contact-us-btn.contact-us-btn{
+        display: inline-block;
+        margin-top: 53px;
+
+    }
+  }
+}
+
+@media (max-width: 990px){
+  .bottom-banner{
+    height: 360px;
+    background: url(../images/bottom-banner-small.png);
+    background-size: cover;
+
+  }
+  .bottom-banner .bottom-banner__wrapper{
+    padding-left: 100px;
+  }
+}
+
+@media (max-width: 720px){
+  .bottom-banner .bottom-banner__wrapper{
+    padding-left: 54px;
+    padding-top: 54px;
+  }
+}

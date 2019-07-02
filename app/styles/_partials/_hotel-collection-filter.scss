@@ -1,0 +1,169 @@
+.hotel-collection__filter {
+  width: 100%;
+  position: relative;
+  display: flex;
+  background-color: #89c0d6;
+  height: 100px;
+  padding: 20px;
+  margin-bottom: 40px;
+
+
+  button.hotel-collection__filter--country,
+  button.hotel-collection__filter--category,
+  button.hotel-collection__filter--type {
+    width: 100%;
+
+    display: flex;
+    position: relative;
+    width: 33.33%;
+    border: 1px solid #f0f0f0;
+    background-color: #ffffff;
+    align-items: center;
+    text-decoration: none;
+    padding: 20px;
+    color: #948f96;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    cursor: pointer;
+    outline-color: #e37d5f;
+
+    &:hover {
+      border: #e37d5f solid 1px;
+    }
+
+    i {
+      color: #e37d5f;
+      margin-left: auto;
+    }
+  }
+}
+
+.hotel-collection__list {
+
+  .hotel-collection__item {
+    text-decoration: none;
+  }
+
+  .hotel-collection__item-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+    .hotel-description {
+      padding: 0;
+      width: 368px;
+      margin-left: 40px;
+
+      h1.hotel-description__hotel-name {
+        color: #575756;
+        font-family: 'Montserrat';
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 40px;
+        text-transform: uppercase;
+      }
+
+      h3.hotel-description__hotel-location {
+        color: #7ab7a8;
+        font-family: 'Montserrat';
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 30px;
+      }
+
+      .wrapper-hotel-description {
+        margin: 0;
+        width: 100%;
+      }
+
+      .hotel-description__hotel-name {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+
+.country-selection {
+  position: absolute;
+  top: 80px;
+  width: 32.15%;
+  height: 300px;
+  background-color: #ffffff;
+  border: #f0f0f0 solid 1px;
+  overflow: hidden;
+
+  form {
+    width: 100%;
+    height: 49px;
+    padding: 20px;
+    padding-bottom: 0;
+
+    .country-selection__search {
+      width: 296px;
+      height: 49px;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 25px;
+      border: none;
+      border-bottom: 1px solid #f0f0f0;
+      background-color: #ffffff;
+
+      &::-ms-input-placeholder,
+      &::-webkit-input-placeholder {
+        color: red;
+      }
+    }
+
+    i {
+      margin-left: auto;
+      font-size: 18px;
+      color: #e37d5f;
+    }
+  }
+
+  .country-selection__country-list {
+    height: 77%;
+    margin-top: 20px;
+    overflow: auto;
+
+    .country-selection__country {
+      height: 30px;
+    }
+
+    .country-selection__country-wrapper {
+      display: flex;
+      align-content: center;
+
+      label {
+        color: #575756;
+        font-family: 'Montserrat';
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px;
+      }
+    }
+  }
+}
+
+.hotel-collection__filter--category+.country-selection {
+  left: 381px;
+  height: 165px;
+
+  .country-selection__country-list {
+    height: 88%;
+  }
+}
+
+.hotel-collection__filter--type+.country-selection {
+  left: 742px;
+  height: 280px;
+
+  .country-selection__country-list {
+    height: 94%;
+  }
+}

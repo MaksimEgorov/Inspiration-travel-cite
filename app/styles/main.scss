@@ -1,0 +1,20 @@
+@import "./_partials/style";
+@import "./_partials/contacts";
+@import "./_partials/main.min";
+@import "./_partials/popup-form";
+@import "./_partials/style-adaptive";
+@import "./_partials/main-banner-hotel";
+@import "./_partials/hotel-description";
+@import "./_partials/hotel-gallery";
+@import "./_partials/hotel-location";
+@import "./_partials/bottom-banner";
+@import "./_partials/footer";
+@import "./_partials/more-info-modal";
+@import "./_partials/hotel-collection";
+@import "./_partials/hotel-collection-filter";
+
+body {
+    .hidden {
+        display: none;
+    }
+}
