@@ -19,6 +19,7 @@ $(function () {
       headerHeight();
     }, 500);
   });
+
   ////
   function setHeiHeight() {
     $('.main').css({
@@ -152,5 +153,62 @@ $(function () {
     $(this).toggleClass('is-active');
     $('.mobile-menu').toggleClass('active')
     $('.desc-menu').toggleClass('logo-none-bg')
-  })
+  });
+
+
+  /*
+  * Select2
+  *
+  */
+  const $select2 = $('.js-select2');
+
+  let $inspSearchField = $('<input class="select2-search__field" placeholder="Поиск" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="Страна" style="width: 100%">');
+  $inspSearchField.keyup(function() {
+    const val = $(this).val().toLowerCase();
+    const $dropdown = $('.select2-dropdown');
+
+    $dropdown.find('.select2-results__option').each(function() {
+      const $this = $(this);
+      $this.text().toLowerCase().indexOf(val) === -1 ? $this.hide() : $this.show();
+    });
+  });
+
+  $select2.select2({
+    closeOnSelect: false,
+    allowClear: false,
+    width: '100%',
+    dropdownCssClass: 'insp-select2-dropdown',
+    sorter: function(data) {
+      data.sort(function(a, b) {
+        return (a.selected === b.selected)? 0 : a.selected? -1 : 1;
+      });
+      return data;
+    }
+  });
+
+  $select2.on('select2:open', function () {
+    const $this = $(this);
+    const $selectContainer = $this.parent().find('.select2-selection');
+    const $searchField = $selectContainer.find('.select2-search__field');
+    const $dropdown = $('.select2-dropdown');
+    const $inline = $selectContainer.find('.select2-search--inline');
+
+    $searchField.prop('disabled', $this.hasClass('js-insp-select2--no-search'));
+    if (!$this.hasClass('js-insp-select2--no-search')) {
+      $searchField.remove();
+      const $list = $selectContainer.find('.select2-selection__rendered');
+      if ($list.find('li').length > 1) {
+        $inline.remove();
+      } else {
+        $inline.text('Страна');
+      }
+
+      const $searchContainer = $dropdown.find('.insp-search-container').length > 0
+        ? $dropdown.find('.insp-search-container')
+        :  $('<div class="insp-search-container"><button class="insp-select2-search-button" /></div>');
+
+      $inspSearchField.prependTo($searchContainer);
+      $dropdown.prepend($searchContainer);
+    }
+  });
 });
