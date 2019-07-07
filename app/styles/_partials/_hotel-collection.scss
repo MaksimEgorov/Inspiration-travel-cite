@@ -37,3 +37,22 @@
     margin-bottom: 40px;
   }
 }
+
+
+@media (max-width: 1625px){
+  .hotel-collection {
+    padding: 86px 120px 86px 120px;
+  }
+}
+
+@media (max-width: 1081px){
+  .hotel-collection {
+    padding: 86px 10px 86px 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hotel-collection {
+    padding: 40px 10px 40px 10px;
+  }
+}

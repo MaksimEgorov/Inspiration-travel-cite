@@ -171,3 +171,66 @@
     height: 94%;
   }
 }
+
+
+@media (max-width: 1150px) {
+  .hotel-collection__filter {
+    flex-direction: column;
+
+    .hotel-collection__filter-item {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1390px) {
+  .hotel-collection__list .hotel-collection__item-wrapper>img {
+    width: 240px;
+    height: 180px;
+  }
+
+  .hotel-collection__list .hotel-collection__item-wrapper .hotel-description h3.hotel-description__hotel-location {
+    margin-top: 0;
+  }
+
+  .hotel-description .hotel-description__wrapper__bottom {
+    margin-top: 15px;
+  }
+
+  .hotel-collection__list .hotel-collection__item-wrapper .hotel-description h1.hotel-description__hotel-name {
+    line-height: 30px;
+  }
+
+  .hotel-collection__list .hotel-collection__item-wrapper .hotel-description {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 840px) {
+  .hotel-collection__list .hotel-collection__item-wrapper>img {
+    width: auto;
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .hotel-collection__list .hotel-collection__item-wrapper>img {
+    width: 280px;
+    height: 180px;
+  }
+
+  .hotel-collection__list .hotel-collection__item-wrapper .hotel-description h1.hotel-description__hotel-name {
+    font-size: 17px;
+    line-height: 25px;
+  }
+
+  .hotel-collection__list .hotel-collection__item-wrapper .hotel-description h3.hotel-description__hotel-location {
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  .hotel-description .hotel-description__wrapper__bottom .wrapper-hotel-description table.hotel-description__detailed {
+    font-size: 14px;
+  }
+}
